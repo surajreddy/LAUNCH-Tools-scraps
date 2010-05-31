@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Password</th>
+    <th>Adminlevel</th>
+    <th>Group</th>
+  </tr>
+  <% div_for user do %>
+    <tr>
+      <td><%=h user.username %></td>
+      <td><%=h user.firstname %></td>
+      <td><%=h user.lastname %></td>
+      <td><%=h user.password %></td>
+      <td><%=h user.adminlevel %></td>
+      <td><%=h user.group_id %></td>
+      <td><%= link_to 'Show', user %></td>
+      <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <%end%>
+</table>

@@ -1,0 +1,12 @@
+<h1>User Index Page</h1>
+<%if session[:user] then%>
+  <p>Welcome <%=@user.firstname%> to <%=@user.group.name%>'s Launch360 page</p>
+  <%= link_to 'logout', :action => 'logout' %>
+  <h2><%=@user.group.greeting%></h2>
+<%else%>
+  <%=link_to 'login', :action => 'login'%>
+<%end%>
+
+
+<br />
+

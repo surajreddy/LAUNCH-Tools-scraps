@@ -1,0 +1,22 @@
+<p>
+  <b>Name:</b>
+  <%=h @group.name %>
+</p>
+
+<p>
+  <b>Greeting:</b>
+  <%=h @group.greeting %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @group.password %>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
+
+<h2>Users Currently in this group:</h2>
+<div id="users">
+  <%= render :partial => @group.users%>
+</div>
