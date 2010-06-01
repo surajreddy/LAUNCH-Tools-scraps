@@ -3,10 +3,52 @@
   <p>Welcome <%=@user.firstname%> to <%=@user.group.name%>'s Launch360 page</p>
   <%= link_to 'logout', :action => 'logout' %>
   <h2><%=@user.group.greeting%></h2>
+  <p>Your assesments will be displayed here:</p>
+  
+  
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>description</th>
+    </tr>
+    <% @user.m_assessment_takes.each do |a| %>
+      <tr>
+	<td><%=h a.m_assessment.name %></td>
+	<td><%=h a.m_assessment.description %></td>
+	<td><%= link_to 'View....(not implemented yet)', a%></td>
+      </tr>
+    <%end%>
+  </table>
+  <p>New assesment link will be displayed here:</p>
+
+
+  <!-- Build you groups assessment table here -->
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>description</th>
+    </tr>
+    <% @user.group.m_assessments.each do |a| %>
+      <tr>
+	<td><%=h a.name %></td>
+	<td><%=h a.description %></td>
+	<td><%= link_to 'Start New', a%></td>
+      </tr>
+    <%end%>
+  </table>
+
+<%if false%>
+<%end%>
+
+
+
+
+
+
 <%else%>
+  <p>You are not logged in.  To continue, please login</p>
   <%=link_to 'login', :action => 'login'%>
 <%end%>
 
 
-<br />
 

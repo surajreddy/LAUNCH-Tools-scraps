@@ -1,4 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :m_assessments
+
+  map.resources :m_categories
+
+  map.resources :m_question_takes
+
+  map.resources :m_assessment_takes
+
+  map.resources :m_answers
+
+  map.resources :m_questions
+
+  map.resources :m_assessments
+
   map.connect ':controller/:action/:id'
   
   map.resources :groups, :has_many => :users

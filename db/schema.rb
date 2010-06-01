@@ -9,12 +9,58 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100528202042) do
+ActiveRecord::Schema.define(:version => 20100531214211) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
     t.text     "greeting"
     t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "m_answers", :force => true do |t|
+    t.integer  "m_question_id"
+    t.integer  "m_category_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "m_assessment_takes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "m_assessment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "m_assessments", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "group_id"
+  end
+
+  create_table "m_categories", :force => true do |t|
+    t.integer  "m_assessment_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "m_question_takes", :force => true do |t|
+    t.integer  "m_assessment_take_id"
+    t.integer  "m_answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "m_questions", :force => true do |t|
+    t.integer  "m_assessment_id"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -31,6 +31,7 @@ class UsersController < ApplicationController
   end
       
   def index
+    debugger
     #@users = User.all
     if session[:user]
       @user = session[:user]
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
 	format.html # index.html.erb
       end
     else
-      redirect_to :action=>'login'
+      #redirect_to :action=>'login' 
     end 
   end
 
