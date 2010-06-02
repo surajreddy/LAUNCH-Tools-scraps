@@ -1,0 +1,13 @@
+<p>
+  <b>M assessment:</b>
+  <%=h @m_question.m_assessment_id %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @m_question.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_m_question_path(@m_question) %> |
+<%= link_to 'Back', m_questions_path %>

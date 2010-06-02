@@ -1,0 +1,22 @@
+<h1>Listing m_questions</h1>
+
+<table>
+  <tr>
+    <th>M assessment</th>
+    <th>Body</th>
+  </tr>
+
+<% @m_questions.each do |m_question| %>
+  <tr>
+    <td><%=h m_question.m_assessment_id %></td>
+    <td><%=h m_question.body %></td>
+    <td><%= link_to 'Show', m_question %></td>
+    <td><%= link_to 'Edit', edit_m_question_path(m_question) %></td>
+    <td><%= link_to 'Destroy', m_question, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New m_question', new_m_question_path %>

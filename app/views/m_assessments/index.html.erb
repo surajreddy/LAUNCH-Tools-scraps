@@ -1,0 +1,26 @@
+<h1>Listing m_assessments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Active</th>
+    <th>Group</th>
+  </tr>
+
+<% @m_assessments.each do |m_assessment| %>
+  <tr>
+    <td><%=h m_assessment.name %></td>
+    <td><%=h m_assessment.description %></td>
+    <td><%=h m_assessment.active %></td>
+    <td><%=h m_assessment.group_id %></td>
+    <td><%= link_to 'Show', m_assessment %></td>
+    <td><%= link_to 'Edit', edit_m_assessment_path(m_assessment) %></td>
+    <td><%= link_to 'Destroy', m_assessment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New m_assessment', new_m_assessment_path %>

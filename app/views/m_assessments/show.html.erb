@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @m_assessment.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @m_assessment.description %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @m_assessment.active %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%=h @m_assessment.group_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_m_assessment_path(@m_assessment) %> |
+<%= link_to 'Back', m_assessments_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  m_assessment_id: 1
+  body: MyText
+
+two:
+  m_assessment_id: 1
+  body: MyText

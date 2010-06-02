@@ -1,0 +1,24 @@
+<h1>Listing m_categories</h1>
+
+<table>
+  <tr>
+    <th>M assessment</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @m_categories.each do |m_category| %>
+  <tr>
+    <td><%=h m_category.m_assessment_id %></td>
+    <td><%=h m_category.name %></td>
+    <td><%=h m_category.description %></td>
+    <td><%= link_to 'Show', m_category %></td>
+    <td><%= link_to 'Edit', edit_m_category_path(m_category) %></td>
+    <td><%= link_to 'Destroy', m_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New m_category', new_m_category_path %>

@@ -1,0 +1,13 @@
+<p>
+  <b>User:</b>
+  <%=h @m_assessment_take.user_id %>
+</p>
+
+<p>
+  <b>M assessment:</b>
+  <%=h @m_assessment_take.m_assessment_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_m_assessment_take_path(@m_assessment_take) %> |
+<%= link_to 'Back', m_assessment_takes_path %>

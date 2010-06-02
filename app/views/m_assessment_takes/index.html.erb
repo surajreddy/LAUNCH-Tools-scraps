@@ -1,0 +1,22 @@
+<h1>Listing m_assessment_takes</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>M assessment</th>
+  </tr>
+
+<% @m_assessment_takes.each do |m_assessment_take| %>
+  <tr>
+    <td><%=h m_assessment_take.user_id %></td>
+    <td><%=h m_assessment_take.m_assessment_id %></td>
+    <td><%= link_to 'Show', m_assessment_take %></td>
+    <td><%= link_to 'Edit', edit_m_assessment_take_path(m_assessment_take) %></td>
+    <td><%= link_to 'Destroy', m_assessment_take, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New m_assessment_take', new_m_assessment_take_path %>

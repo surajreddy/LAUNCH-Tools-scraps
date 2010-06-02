@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  m_assessment_take_id: 1
+  m_answer_id: 1
+
+two:
+  m_assessment_take_id: 1
+  m_answer_id: 1

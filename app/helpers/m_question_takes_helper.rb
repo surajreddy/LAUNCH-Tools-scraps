@@ -1,0 +1,2 @@
+module MQuestionTakesHelper
+end

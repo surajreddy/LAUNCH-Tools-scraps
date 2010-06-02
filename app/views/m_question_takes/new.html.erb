@@ -1,0 +1,19 @@
+<h1>New m_question_take</h1>
+
+<% form_for(@m_question_take) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :m_assessment_take_id %><br />
+    <%= f.text_field :m_assessment_take_id %>
+  </p>
+  <p>
+    <%= f.label :m_answer_id %><br />
+    <%= f.text_field :m_answer_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', m_question_takes_path %>

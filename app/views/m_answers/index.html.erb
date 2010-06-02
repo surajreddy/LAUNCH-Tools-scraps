@@ -1,0 +1,24 @@
+<h1>Listing m_answers</h1>
+
+<table>
+  <tr>
+    <th>M question</th>
+    <th>M category</th>
+    <th>Body</th>
+  </tr>
+
+<% @m_answers.each do |m_answer| %>
+  <tr>
+    <td><%=h m_answer.m_question_id %></td>
+    <td><%=h m_answer.m_category_id %></td>
+    <td><%=h m_answer.body %></td>
+    <td><%= link_to 'Show', m_answer %></td>
+    <td><%= link_to 'Edit', edit_m_answer_path(m_answer) %></td>
+    <td><%= link_to 'Destroy', m_answer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New m_answer', new_m_answer_path %>

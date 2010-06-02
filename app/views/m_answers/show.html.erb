@@ -1,0 +1,18 @@
+<p>
+  <b>M question:</b>
+  <%=h @m_answer.m_question_id %>
+</p>
+
+<p>
+  <b>M category:</b>
+  <%=h @m_answer.m_category_id %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @m_answer.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_m_answer_path(@m_answer) %> |
+<%= link_to 'Back', m_answers_path %>

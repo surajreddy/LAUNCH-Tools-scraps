@@ -31,15 +31,8 @@ class UsersController < ApplicationController
   end
       
   def index
-    debugger
-    #@users = User.all
     if session[:user]
       @user = session[:user]
-      respond_to do |format|
-	format.html # index.html.erb
-      end
-    else
-      #redirect_to :action=>'login' 
     end 
   end
 

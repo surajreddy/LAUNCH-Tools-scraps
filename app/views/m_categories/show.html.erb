@@ -1,0 +1,18 @@
+<p>
+  <b>M assessment:</b>
+  <%=h @m_category.m_assessment_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @m_category.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @m_category.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_m_category_path(@m_category) %> |
+<%= link_to 'Back', m_categories_path %>
