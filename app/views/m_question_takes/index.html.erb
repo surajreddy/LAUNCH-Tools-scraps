@@ -3,13 +3,13 @@
 <table>
   <tr>
     <th>M assessment take</th>
-    <th>M answer</th>
+    <th>M question</th>
   </tr>
 
 <% @m_question_takes.each do |m_question_take| %>
   <tr>
     <td><%=h m_question_take.m_assessment_take_id %></td>
-    <td><%=h m_question_take.m_answer_id %></td>
+    <td><%=h m_question_take.m_question_id %></td>
     <td><%= link_to 'Show', m_question_take %></td>
     <td><%= link_to 'Edit', edit_m_question_take_path(m_question_take) %></td>
     <td><%= link_to 'Destroy', m_question_take, :confirm => 'Are you sure?', :method => :delete %></td>

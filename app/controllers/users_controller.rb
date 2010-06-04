@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
   
   def loginpost
+    debugger
     #@post = User.new(params[:userform])
     #user = User.find(:first, :conditions => ["name = ?, password = ?",@post.name,@post.password])
     user = User.find(:first, :conditions => ["username = ? and password = ?",params[:userform][:name],params[:userform][:password]])
@@ -31,6 +32,7 @@ class UsersController < ApplicationController
   end
       
   def index
+    debugger
     if session[:user]
       @user = session[:user]
     end 
