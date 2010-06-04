@@ -7,8 +7,14 @@
 	</head> 
 	<body>
 		<div class="container">
-			<p style="color: green"><%= notice %></p>
-			<%= yield %> 
+			<h1><%= image_tag "siteheader.jpg", :alt => "Launch" %></h1>
+			<hr />
+			<div class="span-24 last">
+				<p><%= notice %></p>
+				<%= yield %>
+			</div>
+			<hr />
+			<div>LAUNCH is a program of Youth Unlimited (Toronto YFC)</div>
 		</div>
 	</body>
 </html>
