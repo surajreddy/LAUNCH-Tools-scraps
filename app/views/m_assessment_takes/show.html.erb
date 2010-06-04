@@ -15,9 +15,12 @@
     <% @m_assessment_take.m_question_takes.each do |qt| %>
 	  <tr>
 	    <td><%=h qt.m_question.body %></td>
+	    <td>
 	      <%qt.m_answer_takes.each do |a|%>
-		<td>Answer: <%=h a.m_answer.body %></td>
+		Answer: <%=h a.m_answer.body %>
+	        <br />
 	      <%end%>
+	    </td>
 	  </tr>
     <%end%>
   </table>

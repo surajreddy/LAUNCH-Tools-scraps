@@ -111,6 +111,14 @@ answertake = MAnswerTake.find(:last)
 questiontake.m_answer_takes << answertake
 
 
+MAnswerTake.seed(:m_question_take_id) do |a|
+  a.m_question_take_id = 0
+end
+answertake = MAnswerTake.find(:last)
+
+questiontake.m_answer_takes << answertake
+
+
 
 
 #Done########################################
