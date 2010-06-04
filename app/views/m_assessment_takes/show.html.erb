@@ -4,9 +4,23 @@
 </p>
 
 <p>
-  <b>M assessment:</b>
-  <%=h @m_assessment_take.m_assessment_id %>
+  <b>Name:</b>
+  <%=h @m_assessment_take.m_assessment.name %>
 </p>
+   <table>
+    <tr>
+      <th>Questions</th>
+      <th>your answers</th>
+    </tr>
+    <% @m_assessment_take.m_question_takes.each do |q| %>
+      <tr>
+	<td><%=h q.m_question.body %></td>
+	<%q.m_answer_takes.each do a%>
+	  <td><%=h a.m_answer.body %></td>
+	<%end%>
+      </tr>
+    <%end%>
+  </table>
 
 
 <%= link_to 'Edit', edit_m_assessment_take_path(@m_assessment_take) %> |
