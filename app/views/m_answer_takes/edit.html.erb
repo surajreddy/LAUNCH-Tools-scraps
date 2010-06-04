@@ -1,0 +1,20 @@
+<h1>Editing m_answer_take</h1>
+
+<% form_for(@m_answer_take) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :m_question_take_id %><br />
+    <%= f.text_field :m_question_take_id %>
+  </p>
+  <p>
+    <%= f.label :m_answer_id %><br />
+    <%= f.text_field :m_answer_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @m_answer_take %> |
+<%= link_to 'Back', m_answer_takes_path %>
