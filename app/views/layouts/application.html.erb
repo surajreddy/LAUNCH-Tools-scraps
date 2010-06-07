@@ -10,15 +10,17 @@
 	</head> 
 	<body>
 		<div class="container">
-			<div id="header">
-				<h1><%= image_tag "siteheader.jpg", :alt => "Launch" %></h1>
+			<div id="header" class="span-24 last">
+				<h1><%= image_tag "header.gif", :alt => "Launch" %></h1>
 			</div>
-			<div id="content">
+			<div id="content" class="span-24 last">
 				<p><%= notice %></p>
 				<%= yield %>
 			</div>
 			<hr />
-			<div>LAUNCH is a program of Youth Unlimited (Toronto YFC)</div>
+			<div id="footer" class="span-24 last">
+				LAUNCH is a program of Youth Unlimited (Toronto YFC)
+			</div>
 		</div>
 	</body>
 </html>

@@ -20,9 +20,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Login failed, please try again."
       redirect_to :action=> 'login'
     end
-  end
-      
-      
+  end    
       
   def logout
     if session[:user]
