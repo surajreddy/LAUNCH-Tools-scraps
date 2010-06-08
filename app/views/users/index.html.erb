@@ -4,23 +4,25 @@
 
   <h2><%=@user.group.greeting%></h2>
 
-  <p>Your assesments will be displayed here:</p>
+  <br/><h3>Your assesments will be displayed here:</h3>
   <table>
     <tr>
       <th>Name</th>
       <th>description</th>
+      <th>Last Edited</th>
     </tr>
     <% @user.m_assessment_takes.each do |a| %>
       <tr>
 	<td><%=h a.m_assessment.name %></td>
 	<td><%=h a.m_assessment.description %></td>
-	<td><%= link_to 'View....(not implemented yet)', a%></td>
+	<td><%=h a.updated_at %></td>
+	<td><%= link_to 'View', a%></td>
       </tr>
     <%end%>
   </table>
 
 
-  <p>Your group's assessments are here:</p>
+  <br/><h3>Your group's assessments are here:</h3>
   <!-- Build you groups assessment table here -->
   <table>
     <tr>
