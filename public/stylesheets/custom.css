@@ -1,0 +1,25 @@
+/*  Red: #ac260d
+ Orange: #ea8f25
+ Yellow: #f9c521 */
+
+a.signin_button { 
+	margin-left: auto; 
+	margin-right: auto; 
+	display: block; 
+	text-align: center; 
+	width: 190px; 
+	color: #fff; 
+	background: #ac260d; 
+	font-size: 150%; 
+	font-weight: bold; 
+	padding: 20px;
+}
+
+.round { 
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+}
+
+#footer {
+	text-align: center;
+}

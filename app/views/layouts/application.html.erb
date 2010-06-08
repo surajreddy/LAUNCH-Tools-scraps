@@ -2,13 +2,25 @@
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
 	<head>
 		<title>LAUNCH-Tools</title> 
-		<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %> 
-		<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+		<%= stylesheet_link_tag 'screen', :media => 'screen' %> 
+		<%= stylesheet_link_tag 'print', :media => 'print' %>
+		<!--[if lt IE 8]><%= stylesheet_link_tag 'ie' %><![endif]--> 
+		<%= stylesheet_link_tag 'custom', :media => 'screen' %>
+		<%= stylesheet_link_tag 'plugins/fancy-type/screen', :cache => true %>
 	</head> 
 	<body>
 		<div class="container">
-			<p style="color: green"><%= notice %></p>
-			<%= yield %> 
+			<div id="header" class="span-24 last">
+				<h1><%= image_tag "header.gif", :alt => "Launch" %></h1>
+			</div>
+			<div id="content" class="span-24 last">
+				<p><%= notice %></p>
+				<%= yield %>
+			</div>
+			<hr />
+			<div id="footer" class="span-24 last">
+				LAUNCH is a program of Youth Unlimited (Toronto YFC)
+			</div>
 		</div>
 	</body>
 </html>

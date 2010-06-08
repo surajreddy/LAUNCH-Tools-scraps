@@ -20,9 +20,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Login failed, please try again."
       redirect_to :action=> 'login'
     end
-  end
-      
-      
+  end    
       
   def logout
     if session[:user]
@@ -37,6 +35,7 @@ class UsersController < ApplicationController
       @user = session[:user]
     end 
   end
+
 
   # GET /users/1
   # GET /users/1.xml
